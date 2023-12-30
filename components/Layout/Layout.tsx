@@ -3,8 +3,6 @@ import { ReactNode } from 'react'
 import {
   META_DESCRIPTION,
   META_TITLE,
-  OG_IMAGE,
-  OG_URL,
   TITLE_BASE,
 } from '../../constants/meta'
 import Footer from '../Footer/Footer'
@@ -36,8 +34,6 @@ const Layout: React.FC<Props> = ({
         <meta name="description" content={description} />
         <meta name="og:title" content={META_TITLE} />
         <meta name="og:description" content={description} />
-        <meta name="og:url" content={OG_URL} />
-        <meta name="og:image" content={OG_IMAGE} />
         <link
           rel="icon"
           media="(prefers-color-scheme: light)"

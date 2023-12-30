@@ -15,13 +15,13 @@ const Footer: React.FC<Props> = ({ centered, noPadding, hideGithub }) => {
       className={noPadding ? styles['no-padding'] : ''}
     >
       <p id={styles.copyright}>
-        Design, code and rights reserved by Dezso Meszaros
+        Design, code and rights reserved by Manu Bharadwaj
       </p>
 
       {!centered && !hideGithub && (
         <a
           title="Edit this page on Github"
-          href="https://github.com/meszarosdezso/Self-site.git"
+          href="https://github.com/Manu577228"
           target="_blank"
           className={styles.github}
           rel="noopener noreferrer"

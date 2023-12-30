@@ -1,6 +1,5 @@
 import styles from './Nav.module.scss'
 import LightSwitch from '../LightSwitch/LightSwitch'
-import { Camera } from 'react-feather'
 import NavItem, { NavItemType } from './NavItem'
 import Link from 'next/link'
 
@@ -11,12 +10,6 @@ const NAV_ITEMS: NavItemType[] = [
   //   link: '/visualizations',
   //   Icon: Image,
   // },
-  {
-    id: 'photos',
-    title: 'Photos',
-    link: '/photos',
-    Icon: Camera,
-  },
   // {
   //   id: 'bio',
   //   title: 'Bio',
@@ -34,7 +27,7 @@ const Nav: React.FC<Props> = ({ hideMenu = false }) => {
     <nav id={styles.Nav}>
       <Link href="/">
         <div id={styles.logo}>
-          <img src="/logo240.png" alt="logo" />
+          <img src="https://rukminim1.flixcart.com/image/850/1000/xif0q/key-chain/8/c/t/bharadwaj-name-black-keychain-sy-gifts-1-original-imagpn4p6wmezv9w.jpeg?q=20" alt="logo" />
         </div>
       </Link>
 

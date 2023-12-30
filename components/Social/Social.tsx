@@ -1,5 +1,5 @@
 import styles from './Social.module.scss'
-import { GitHub, Instagram, Linkedin, Phone } from 'react-feather'
+import { GitHub, Linkedin } from 'react-feather'
 import PrimaryButton from '../PrimaryButton/PrimaryButton'
 
 type Props = {
@@ -8,24 +8,14 @@ type Props = {
 
 const SOCIALS = [
   {
-    label: 'meszarosdezso',
-    link: 'https://github.com/meszarosdezso',
+    label: 'Github',
+    link: 'https://github.com/Manu577228',
     Icon: GitHub,
   },
   {
-    label: 'meszarosdezso',
-    link: 'https://www.linkedin.com/in/meszarosdezso/',
+    label: 'LinkedIn',
+    link: 'https://www.linkedin.com/in/manu-bharadwaj-3507a345/',
     Icon: Linkedin,
-  },
-  {
-    label: 'meszarosdezso',
-    link: 'https://instagram.com/meszarosdezso',
-    Icon: Instagram,
-  },
-  {
-    label: '+36 30 839 6751',
-    link: 'tel:+36308396751',
-    Icon: Phone,
   },
 ] as const
 

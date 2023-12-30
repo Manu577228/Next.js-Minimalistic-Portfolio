@@ -6,7 +6,7 @@ type Props = {}
 const Contact: React.FC<Props> = () => {
   return (
     <div className={styles.Contact}>
-      <h1>find me here</h1>
+      <h1>Track me down here <br /><br /> ↓</h1>
       <Social />
     </div>
   )

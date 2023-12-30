@@ -10,8 +10,7 @@ import {
 } from 'fs'
 import Visualization from '../models/viz'
 import sanity from '../config/sanity'
-import { Experiment } from '../models/experiment'
-import { Photo } from '../models/photo'
+
 
 export async function fetchVisualizations(): Promise<Visualization[]> {
   try {
@@ -35,32 +34,6 @@ export const fetchBioPage = async () => {
   }
 }
 
-export const fetchPhotos = async () => {
-  try {
-    const photos = await sanity.fetch<Photo[]>(`
-      *[ _type == 'photo' ] | order(image.asset->.metadata.exif.DateTimeOriginal desc) {
-        title,
-        "url": image.asset->.url,
-        "meta": image.asset->.metadata {
-          blurHash,
-          lqip,
-          exif {
-            "date": DateTimeOriginal,
-            "f": FNumber,
-            "lens": LensModel,
-            "shutter": round(1 / ExposureTime),
-            "focal": FocalLength,
-          },
-          dimensions
-        }
-      }
-    `)
-
-    return photos
-  } catch {
-    return []
-  }
-}
 
 export const fetchWorks = async (): Promise<Work[]> => {
   try {
@@ -85,25 +58,6 @@ export const fetchWorks = async (): Promise<Work[]> => {
   }
 }
 
-export const fetchExperiments = async (): Promise<Experiment[]> => {
-  try {
-    const experiments = await sanity.fetch<
-      Experiment[]
-    >(`*[ _type == "experiment" ] | order(date desc) {
-        title,
-        date,
-        "file": file.asset->,
-        description
-    }`)
-
-    return experiments
-  } catch (e) {
-    if (e instanceof Error) {
-      console.error(e.message)
-    }
-    return []
-  }
-}
 
 export const fetchWork = async (slug: string): Promise<Work> => {
   const work =

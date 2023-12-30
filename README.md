@@ -1,12 +1,10 @@
 <div align="center">
 
-![logo](https://github.com/meszarosdezso/Self-site/blob/prod/public/logo120.png?raw=true)
+![logo](https://github.com/Manu577228/Manu577228/blob/main/Manu%20Banner.PNG)
 
-### My portfolio website, written in Next.js + TypeScript + Sass.
+### My portfolio website, written in Next.js + TypeScript
 
-&nbsp;
-
-MIT LICENSE **©** 2022
+MIT LICENSE **©** 2023
 
 
 

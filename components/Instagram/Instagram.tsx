@@ -9,15 +9,7 @@ const Instagram: React.FC<{ posts: InstagramPost[] }> = ({ posts }) => {
     <div id={styles.Instagram}>
       <br />
       <h1>
-        Latest posts on
-        <br />
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://instagram.com/meszarosdezso"
-        >
-          <span className="accent-bg">Instagram</span>
-        </a>
+          <span className="accent-bg">PROJECTS</span>
       </h1>
 
       <div className={styles.posts}>

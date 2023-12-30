@@ -4,16 +4,10 @@ import { useMouse } from '../../utils/useMouse'
 import { useEffect, useState } from 'react'
 
 const titles = [
-  'UX/UI Developer',
+  'Software Engineer',
   <span>
-    Currently at <br />
-    <a
-      rel="noopener noreferrer"
-      target="_blank"
-      href="https://uxstudioteam.com"
-    >
-      UX Studio
-    </a>
+    MERN | MEAN & <br />
+    Springboot
   </span>,
 ]
 
@@ -41,9 +35,9 @@ const LandingPage: React.FC = () => {
         }}
         id={styles['name-hero']}
       >
-        Dezso
+        Manu
         <br />
-        Meszaros
+        Bharadwaj
       </h1>
 
       <p className={styles.titles}>
@@ -66,7 +60,7 @@ const LandingPage: React.FC = () => {
         }}
         id={styles['imadethese']}
       >
-        I've made these
+        My Recent Mini Projects
       </h4>
     </div>
   )
