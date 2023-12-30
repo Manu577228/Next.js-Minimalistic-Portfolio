@@ -2,49 +2,49 @@
   {
     "id": "17861009403060719",
     "permalink": "https://bharadwaj-movies-app.vercel.app/",
-    "caption": "Movie Info : React, Bootstrap & TMDB API.",
+    "caption": "Movie Info",
     "local_url": "/assets/instagram_0.jpg"
   },
   {
     "id": "17950894523606249",
     "permalink": "https://bharadwaj-crypto-currency.vercel.app/",
-    "caption": "Crypto-Currency : React & Coingecko API.",
+    "caption": "Crypto-Currency",
     "local_url": "/assets/instagram_1.jpg"
   },
   {
     "id": "18008335637003973",
     "permalink": "https://react-bharadwaj-dashboard.vercel.app/",
-    "caption": "Dashboard : React, Tremor & Tailwind CSS.",
+    "caption": "Dashboard",
     "local_url": "/assets/instagram_2.jpg"
   },
   {
     "id": "17934690746702683",
     "permalink": "https://bharadwaj-travels-react.netlify.app/",
-    "caption": "Travel Website : React & Tailwind CSS.",
+    "caption": "Travel Website",
     "local_url": "/assets/instagram_3.jpg"
   },
   {
     "id": "18016348942558999",
     "permalink": "https://bharadwaj-dictionary.vercel.app/",
-    "caption": "Dictionary : React, Rest API & Tailwind CSS",
+    "caption": "Dictionary",
     "local_url": "/assets/instagram_4.jpg"
   },
   {
     "id": "17941746848525428",
     "permalink": "https://bharadwaj-pokemon-app.vercel.app/",
-    "caption": "Pokemon App : React, Poke API & Vanilla CSS",
+    "caption": "Pokemon App",
     "local_url": "/assets/instagram_5.jpg"
   },
   {
     "id": "18218226361239402",
     "permalink": "https://manu-blog.vercel.app/",
-    "caption": "Mini Blog : Next, React & Tailwind CSS",
+    "caption": "Mini Blog",
     "local_url": "/assets/instagram_6.jpg"
   },
   {
     "id": "18042708427445960",
     "permalink": "https://bharadwaj-shopping-cart.vercel.app/",
-    "caption": "Shopping Cart : React, Typescript & Rest API.",
+    "caption": "Shopping Cart",
     "local_url": "/assets/instagram_7.jpg"
   }
 ]
