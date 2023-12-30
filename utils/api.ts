@@ -1,5 +1,4 @@
 import axios from 'axios'
-import { Work } from '../models/work'
 import { InstagramResponse } from '../models/instagram'
 import {
   readFileSync,
@@ -8,20 +7,8 @@ import {
   createWriteStream,
   WriteStream,
 } from 'fs'
-import Visualization from '../models/viz'
 import sanity from '../config/sanity'
 
-
-export async function fetchVisualizations(): Promise<Visualization[]> {
-  try {
-    const data = await sanity.fetch<{ name: string; image_url: string }[]>(
-      `*[ _type == "visualization" ]{ name, "image_url": image.asset->.url }`
-    )
-    return data
-  } catch (e) {
-    return []
-  }
-}
 
 export const fetchBioPage = async () => {
   try {
@@ -32,45 +19,6 @@ export const fetchBioPage = async () => {
   } catch {
     return { content: 'Failed to load bio page' }
   }
-}
-
-
-export const fetchWorks = async (): Promise<Work[]> => {
-  try {
-    const works = await sanity.fetch<
-      Work[]
-    >(`*[ _type == "work" ] | order(order asc) {
-        title,
-            date,
-            "slug": slug.current,
-        short_description,
-        url,
-        "cover": images[0].asset->.url,
-        tags
-    }`)
-
-    return works
-  } catch (e) {
-    if (e instanceof Error) {
-      console.error(e.message)
-    }
-    return []
-  }
-}
-
-
-export const fetchWork = async (slug: string): Promise<Work> => {
-  const work =
-    await sanity.fetch(`*[ _type == "work" && slug.current == '${slug}'][0]{
-      title,
-      description,
-      "images": images[1...100].asset->{ url },
-      date,
-      stack,
-      tags
-    }`)
-
-  return work
 }
 
 export const fetchInstagram = async (): Promise<any> => {
