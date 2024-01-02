@@ -1,5 +1,4 @@
-import React from 'react'
-import dynamic from 'next/dynamic'
+import React, { lazy, Suspense } from 'react'
 import { isBrowser } from '../../utils/window'
 import P5 from 'p5'
 
@@ -92,7 +91,7 @@ const sketch = () => (p: P5) => {
     }
 
     checkParticles(particlesToCheck: Particle[]) {
-      particlesToCheck.forEach(other => {
+      particlesToCheck.forEach((other: Particle) => {
         const d = this.pos.dist(other.pos)
         if (d < 200) {
           p.stroke(188, 255)
@@ -103,20 +102,22 @@ const sketch = () => (p: P5) => {
   }
 }
 
+const ReactP5Wrapper = lazy(() =>
+  import('react-p5-wrapper').then(({ ReactP5Wrapper }) => ({
+    default: ReactP5Wrapper,
+  }))
+)
+
 const Canvas: React.FC = () => {
   if (!isBrowser()) return <span></span>
 
-  const ReactP5Wrapper: any = dynamic(
-    import('react-p5-wrapper').then(({ ReactP5Wrapper }) => ReactP5Wrapper),
-    {
-      ssr: false,
-      loading: () => <div className="sketch-holder"></div>,
-    }
-  )
-
   const s = sketch()
 
-  return <ReactP5Wrapper sketch={s} />
+  return (
+    <Suspense fallback={<div className="sketch-holder"></div>}>
+      <ReactP5Wrapper sketch={s} />
+    </Suspense>
+  )
 }
 
 export default Canvas
