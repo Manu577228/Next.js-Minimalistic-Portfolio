@@ -1,5 +1,5 @@
 import styles from './Social.module.scss'
-import { GitHub, Linkedin } from 'react-feather'
+import { GitHub, Linkedin, Youtube } from 'react-feather'
 import PrimaryButton from '../PrimaryButton/PrimaryButton'
 
 type Props = {
@@ -16,6 +16,11 @@ const SOCIALS = [
     label: 'LinkedIn',
     link: 'https://www.linkedin.com/in/manu-bharadwaj-3507a345/',
     Icon: Linkedin,
+  },
+  {
+    label: 'Youtube',
+    link: 'https://www.youtube.com/@code-with-Bharadwaj',
+    Icon: Youtube,
   },
 ] as const
 
