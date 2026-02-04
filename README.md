@@ -1,6 +1,6 @@
 ### My portfolio website, written in Next.js + TypeScript
 
-# Welcome to My Minimalistic Portfolio
+# Welcome to My Minimalistic Portfolio!
 
 Hey there! 👋 I'm Manu Bharadwaj. If you find this project useful or interesting, don't forget to give it a ⭐️!
 
