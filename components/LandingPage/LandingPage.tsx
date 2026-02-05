@@ -6,8 +6,9 @@ import { useEffect, useState } from 'react'
 const titles = [
   'Software Engineer',
   <span>
-    MERN | MEAN & <br />
-    Springboot
+    Springboot & <br />
+    Django & <br />
+    React / Angular
   </span>,
 ]
 
